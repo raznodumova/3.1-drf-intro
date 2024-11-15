@@ -15,4 +15,4 @@ class Measurement(models.Model):
     temperature = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
     sensor_id = models.ForeignKey(Sensor, on_delete=models.CASCADE, related_name='measurements')
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='media/')
